@@ -1,5 +1,5 @@
 import React from 'react'
-import { ExampleComponent } from 'uploadablef-components'
+import { UploadableFButton } from 'uploadablef-components'
 
 const App = () => {
   const uploadImageObj = {
@@ -22,7 +22,7 @@ const App = () => {
   }
 
   return(
-    <ExampleComponent
+    <UploadableFButton
       QRCodedata={uploadImageObj}
       ButtonName={'Scan and Upload'}
       ButtonVariant={'primary'}

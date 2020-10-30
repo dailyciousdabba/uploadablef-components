@@ -4,7 +4,7 @@ import { Modal, Button, Container, Row, Col } from 'react-bootstrap';
 import { QRCode } from 'react-qr-svg';
 import { isMobile } from "react-device-detect";
 
-export const ExampleComponent = ({QRCodedata,ButtonName,ButtonVariant}) => {
+export const UploadableFButton = ({QRCodedata,ButtonName,ButtonVariant}) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
