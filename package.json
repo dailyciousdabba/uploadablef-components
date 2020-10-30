@@ -49,5 +49,11 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "react-bootstrap": "^1.4.0",
+    "react-device-detect": "^1.14.0",
+    "react-qr-svg": "^2.2.2"
+  }
 }
