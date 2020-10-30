@@ -1,6 +1,6 @@
 # uploadablef-components
 
-> This is for the use of uploadableF app
+> This is for the use of API of uploadableF app
 
 [![NPM](https://img.shields.io/npm/v/uploadablef-components.svg)](https://www.npmjs.com/package/uploadablef-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -13,15 +13,36 @@ npm install --save uploadablef-components
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
+import { ExampleComponent } from 'uploadablef-components'
 
-import MyComponent from 'uploadablef-components'
-import 'uploadablef-components/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
+const App = () => {
+  const uploadImageObj = {
+    documentList: [
+      {
+        documentName: 'Aadhar Card',
+        id: '1',
+        limit: 200,
+        type: 'jpeg',
+        uploadURL: 'https://abc.com/api/'
+      },
+      {
+        documentName: 'School XI Marksheet',
+        id: '2',
+        limit: 350,
+        type: 'jpeg',
+        uploadURL: 'https://abc.com/api/'
+      }
+    ]
   }
+
+  return (
+    <ExampleComponent
+      QRCodedata={uploadImageObj}
+      ButtonName={'Scan and Upload'}
+      ButtonVariant={'primary'}
+    />
+  )
 }
 ```
 
