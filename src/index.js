@@ -4,34 +4,15 @@ import { Modal, Button, Container, Row, Col } from 'react-bootstrap';
 import { QRCode } from 'react-qr-svg';
 import { isMobile } from "react-device-detect";
 
-export const ExampleComponent = () => {
+export const ExampleComponent = ({QRCodedata,ButtonName,ButtonVariant}) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const uploadImageObj = {
-      "documentList": [
-          {
-            documentName: "Aadhar Card",
-            id: "1",
-            limit: 200,
-            type: "jpeg",
-            uploadURL: "https://abc.com/api/"
-          },
-          {
-            documentName: "School XI Marksheet",
-            id: "2",
-            limit: 350,
-            type: "jpeg",
-            uploadURL: "https://abc.com/api/"
-          }
-        ]
-  }
-
   return (
       <div>
-          <Button variant="primary" onClick={handleShow}>
-              Scan and Upload
+          <Button variant={ButtonVariant} onClick={handleShow}>
+              {ButtonName}
           </Button>
 
           <Modal
@@ -50,7 +31,7 @@ export const ExampleComponent = () => {
                           <Col xs={12} md={12}>
                               <QRCode
                                   level="Q"
-                                  value={JSON.stringify(uploadImageObj)}
+                                  value={JSON.stringify(QRCodedata)}
                               />
                           </Col>
                       </Row>
